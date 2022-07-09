@@ -1,0 +1,9 @@
+
+# postgres数据库配置: DATABASE_URL=mysql://[user[:password]@]host/database_name
+DATABASE_URL=postgres://user:passwd@127.0.0.1:5432/gwmc
+
+# 网址
+BASE_URL=https://127.0.0.1:5898/
+
+# 日志记录模式：Off,Error,Warn,Info,Debug,Trace
+RUST_LOG=Debug

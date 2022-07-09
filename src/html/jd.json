@@ -1,0 +1,257 @@
+{
+    //https://api.m.jd.com/api?
+    appid=paimai&functionId=getPaimaiRealTimeData
+    &body={%22paimaiId%22:289011596,%22start%22:0,%22end%22:9,%22source%22:5}
+    &loginType=2&_=1657252507486
+    https://api.m.jd.com/api?appid=paimai&functionId=getPaimaiRealTimeData&body={%22paimaiId%22:289011596,%22start%22:0,%22end%22:9,%22source%22:5}
+    "code": 0,
+    "data": {
+        "accessEnsureNum": 0,
+        "accessNum": 5032,
+        "auctionStatus": 0,
+        "bidCount": 0,
+        "bidList": [],
+        "bidderName": "",
+        "blowCondition": "",
+        "blowFlag": 0,
+        "confirmationUrl": "",
+        "currentBidUserNumber": "",
+        "currentPrice": 6884.0,      //当前价
+        "currentPriceStr": "6,884",
+        "currentUser": "",
+        "delayEndTime": "",
+        "displayStatus": 1,
+        "jdShipOrderAddress": "",
+        "judicatureRealTimeInfoResult": {
+            "bankAccountResult": null,
+            "refNum": ""
+        },
+        "myBid": null,
+        "myNumber": "暂无代码",
+        "oldPriorPurchaserLevel": 0,
+        "orderStatus": 3,
+        "paimaiChargeOrderResult": null,
+        "paimaiGroupReduceRealTimeResult": null,
+        "paimaiId": 289011596,   //拍卖ID
+        "passKey": "",
+        "pauseTime": null,
+        "payDeadline": "",
+        "payUrl": "",
+        "priceLowerOffset": 137.0,  //加价幅度
+        "priorPurchaserLevel": 0,
+        "remainTime": 511181712,
+        "remarks": "",
+        "restartTime": "",
+        "whetherTrustee": 0
+    },
+    "message": "成功",
+    "status": 0
+}
+
+// 取得视频
+// https://api.m.jd.com/api?appid=paimai&functionId=getVideoPathNew&body={%22paimaiId%22:289011596,%22source%22:5}
+{
+    "code": 0,
+    "data": {
+        "h5MainUrl": "",
+        "h5Url": "//newbuz.360buyimg.com/video/4.5/jdvideo.html?autoplay=false&fuScrnEnabled=true&playbackRateEnabled=true&fileid=9335cb7f-6854-42b3-bfd3-3f89d6a2a264&appid=1251412368&sw=1280&sh=720",
+        "mp4MainUrl": "",
+        "mp4Url": "//jvod.300hu.com/vod/product/9335cb7f-6854-42b3-bfd3-3f89d6a2a264/df32bd86602549789896621f5df017b8.mp4?source=2&h265=h265/113074/be24685105a444f68a3b9d4255abe791.mp4"   //视频地址
+    },
+    "message": "成功",
+    "status": 0
+}
+
+//取得法院信息
+// https://api.m.jd.com/api?appid=paimai&functionId=queryVendorInfo&body={%22vendorId%22:640378,%22publishSource%22:7}
+{
+    "code": 0,
+    "data": {
+        "applicantPhone": "11111111111",
+        "logoUrl": "",
+        "mobile": "",
+        "shopId": 640378,
+        "shopName": "沭阳县人民法院"   //处置单位:所属法院
+    },
+    "message": "成功",
+    "status": 0
+}
+
+// 评估报告
+// https://api.m.jd.com/api?appid=paimai&functionId=queryAttachFilesForIntro&body={%22paimaiId%22:289011596,%22custom%22:0}
+{
+    "code": 0,
+    "data": [
+        {
+            "attachmentAddress": "https://storage.jd.com/auction.gateway/2F137BDA91CA94158FEFBCBA3FE1105920220628101253788.docx",
+            "attachmentCode": "2F137BDA91CA94158FEFBCBA3FE11059",
+            "attachmentFormat": "docx",
+            "attachmentName": "车辆信息-苏NA386P.docx",
+            "attachmentSize": "936454",
+            "attachmentStyle": "2",
+            "attachmentType": "3",
+            "code": "892D70B6AAA8ED39660085BE7F7DDFB2",
+            "evtId": 289011596,
+            "isDeleted": 0
+        }
+    ],
+    "message": "成功",
+    "status": 0
+}
+
+//详情内容
+// https://api.m.jd.com/api?appid=paimai&functionId=getProductBasicInfo&body={%22paimaiId%22:289011596}
+{
+    "code": 0,
+    "data": {
+        "albumId": 3093186,
+        "assessmentPrice": 0.0,   //评估价
+        "auctionType": 5,
+        "biddingCycle": 1440,
+        "businessType": 1,
+        "categoryId": 12727,
+        "commentScore": 0,
+        "commissionInfo": "",
+        "commissionMax": "",
+        "commissionRateSection": "",
+        "courtVendorId": 640378,
+        "customId": 0,
+        "delayedTime": 5,
+        "displayStatus": 1,
+        "downReason": "",
+        "endTime": 1657850400000,   //结束时间 2022-7-15 10:0:0
+        "ensurePrice": 1376.0,    //保证金
+        "entrustLocation": "",
+        "extendInfoMap": "{\"biddingPeriod\":86400}",
+        "isLogin": "N",
+        "isPriorPurchaser": 0,
+        "judicatureBasicInfoResult": {
+            "consultName": "江苏京东信息技术有限公司",
+            "consultTel": "400-6229586/0527-83911883",
+            "loan": 0,
+            "marketPrice": 9834.0,    
+            "purchaseRestriction": 0,
+            "snapshotInfoResultList": [],
+            "specialNotice": ""
+        },
+        "jumpOrgUrl": "",
+        "jumpPcOrgUrl": "",
+        "jumpPcShopUrl": "https://auction.jd.com/courtProductList.html?vendorId=640378",
+        "jumpShopUrl": "https://pmmall.m.jd.com/#/mall/640378?publishSource=7&orgIdType=1",
+        "labelList": [
+            {
+                "associateType": 1,
+                "id": 1027,
+                "name": "诉讼资产",
+                "showOrder": 6,
+                "showType": 1,
+                "specialType": 1,
+                "status": 1,
+                "type": 1
+            }
+        ],
+        "minPrice": "有",
+        "originalId": "ed4511c4ed4e40899acd695131c21ace",
+        "paimaiGroupReduceBasicInfoResult": {
+            "reduceStageRule": ""
+        },
+        "paimaiId": 289011596,
+        "paimaiImageResultList": [
+            //相册   
+            {
+                "imagePath": "jfs/t1/197788/4/24657/190942/62ba6399Ef8021fb5/f83aa4bb4dd19449.jpg",
+                "skuId": 10055268494669
+            },
+            {
+                "imagePath": "jfs/t1/21009/1/17634/224759/62ba639aEcf26a3e8/894752859ff81d01.jpg",
+                "skuId": 10055268494669
+            },
+            {
+                "imagePath": "jfs/t1/176694/40/24254/179320/62ba639bE3860be46/e9e07ec095625fb9.jpg",
+                "skuId": 10055268494669
+            },
+            {
+                "imagePath": "jfs/t1/8772/26/17712/246907/62ba639cEe5533bf7/89f3523d9f28a7da.jpg",
+                "skuId": 10055268494669
+            },
+            {
+                "imagePath": "jfs/t1/41171/10/18897/174602/62ba639dE558160f2/4a4f19ba9b035c71.jpg",
+                "skuId": 10055268494669
+            },
+            {
+                "imagePath": "jfs/t1/2247/10/18809/226162/62ba639eE9e4ff4d2/b0dd6c12fb6875a7.jpg",
+                "skuId": 10055268494669
+            },
+            {
+                "imagePath": "jfs/t1/67075/16/19825/181572/62ba639fEac7f6b7a/f8834a4d13df7fe7.jpg",
+                "skuId": 10055268494669
+            },
+            {
+                "imagePath": "jfs/t1/211784/26/20156/184387/62ba63a0E4adaba8d/1057fd079d20f016.jpg",
+                "skuId": 10055268494669
+            }
+        ],
+        "paimaiTimes": 1,   //阶段   1一拍  2.二拍    4.变卖
+        "pin": "",
+        "platType": 0,
+        "priceHigherOffset": 1.00000000001E11,
+        "priceLowerOffset": 137.0,   //加价幅度
+        "productAddressResult": {  //标的物所在地
+            "address": "恒通物流停车场",
+            "city": "宿迁市",
+            "cityId": 933,
+            "county": "沭阳县",
+            "countyId": 8558,
+            "province": "江苏",
+            "provinceId": 12,
+            "town": ""
+        },
+        "productId": 10022779696313,
+        "publishSource": 7,
+        "rateSection": "",
+        "remark": "",
+        "selfOrderHasDiscount": 0,
+        "serviceMoneyInfo": "",
+        "serviceMoneyType": 0,
+        "serviceOrganization": "",
+        "serviceSupport": "",
+        "skuId": 10055268494669,
+        "specifyCertificate": "",
+        "startPrice": 6884.0,    //起拍价
+        "startTime": 1657764000000,   //开拍时间  2022-7-14 10:0:0
+        "supervisionOrganization": "",
+        "supportJdShip": 0,
+        "tailPayMode": 1,
+        "title": "苏NA386P车辆",   //标题
+        "totalStock": 1,
+        "uploadOrganization": "",
+        "vendorId": 640378,
+        "vrFlag": 0,
+        "vrUrl": "",
+        "ynExt": "Y"
+    },
+    "message": "成功",
+    "status": 0
+} 
+
+//标的物详情
+// https://api.m.jd.com/api?appid=paimai&functionId=queryProductDescription&body={%22paimaiId%22:289011596,%22source%22:5}
+{
+    "code": 0,
+    "data": "<p style='text-indent: 40px;'><strong><span style='color: red; font-family: 等线; font-size: 20px;'>咨询、展示看样的方式：即日起至拍卖日前接受咨询：本院已委托“江苏京东信息技术有限公司”在拍卖期间对上述标的相关信息进行咨询及组织看样等工作（看样时间根据预约情况由“江苏京东信息技术有限公司”安排）联系电话： <span>400-6229586</span>或登陆访问<span>sifa.jd.com</span>“京东司法拍卖拍卖”网站、关注微信公众号“京东拍卖”或者京东小程序“京东拍卖”自助预约。</span></strong></p><p style='text-indent: 40px;'><span style='color: red; font-family: 等线; font-size: 20px;'>特别提示：该公司提供的相关信息由该公司负责并承担责任，一切答复内容不代表法院立场，仅供竞买人参考，竞买人也可向本院及办理权证、过户手续的行政职能部门了解、核实。江苏京东信息技术有限公司联系电话：</span><span style='color: red; font-family: 等线; font-size: 20px;'>400-6229586</span><span style='color: red; font-family: 等线; font-size: 20px;'>或登陆访问<span>sifa.jd.com</span>“京东司法拍卖”网站、关注微信公众号或者京东小程序“京东拍卖”自助预约。</span></p><p style='background: white;'><span style='color: rgb(102, 102, 102); font-family:;'> </span></p><table width='617' style='margin: auto auto auto 6px; border-collapse: collapse;' border='0' cellspacing='0' cellpadding='0'><tbody><tr style='height: 33px;'><td width='617' valign='bottom' style='background: white; padding: 1px 1px 10px; border: 1px solid black; border-image: none; width: 617px; height: 33px;' colspan='5'><p style='text-align: center; line-height: 26px; vertical-align: bottom;'><span style='color: black; font-family: 宋体; font-size: 24px;'>二手车辆标的调查情况表</span></p></td></tr><tr style='height: 23px;'><td width='101' style='background: white; border-width: 0px 1px 1px; border-style: none solid solid; border-color: rgb(0, 0, 0) black black; padding: 1px 1px 10px; border-image: none; width: 101px; height: 23px;'><p style='line-height: 26px; vertical-align: middle;'><span style='color: black; font-family: 宋体; font-size: 14px;'>标的物名称</span></p></td><td width='516' style='background: white; border-width: 0px 1px 1px 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 1px 1px 10px; width: 516px; height: 23px;' colspan='4'><p style='line-height: 26px; vertical-align: middle;'><span style='color: rgb(102, 102, 102); font-family: 宋体; font-size: 14px;'>苏<span>NA386P</span>车辆</span></p></td></tr><tr style='height: 23px;'><td width='101' style='background: white; border-width: 0px 1px 1px; border-style: none solid solid; border-color: rgb(0, 0, 0) black black; padding: 1px 1px 10px; border-image: none; width: 101px; height: 23px;'><p style='line-height: 26px; vertical-align: middle;'><span style='color: black; font-family: 宋体; font-size: 14px;'>处置依据</span></p></td><td width='516' style='background: white; border-width: 0px 1px 1px 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 1px 1px 10px; width: 516px; height: 23px;' colspan='4'><p style='line-height: 26px; vertical-align: middle;'><span style='color: gray; font-family: 宋体; font-size: 14px;'>司法裁定</span></p></td></tr><tr style='height: 42px;'><td width='101' style='background: white; border-width: 0px 1px 1px; border-style: none solid solid; border-color: rgb(0, 0, 0) black black; padding: 1px 1px 10px; border-image: none; width: 101px; height: 42px;'><p style='line-height: 26px; vertical-align: middle;'><span style='color: black; font-family: 宋体; font-size: 14px;'>标的物权证情况</span></p></td><td width='134' style='background: white; border-width: 0px 1px 1px 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 1px 1px 10px; width: 134px; height: 42px;'><p style='line-height: 26px; vertical-align: middle;'><span style='color: gray; font-family: 宋体; font-size: 14px;'>法院执行裁定书</span></p></td><td width='383' style='background: white; border-width: 0px 1px 1px 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 1px 1px 10px; width: 383px; height: 42px;' colspan='3'><p style='line-height: 26px; vertical-align: middle;'><span style='color: gray; font-family: 宋体; font-size: 14px;'>(2021)</span><span style='color: gray; font-family: 宋体; font-size: 14px;'>苏<span>1322</span>执<span>5523</span>号</span></p></td></tr><tr style='height: 23px;'><td width='101' style='background: white; border-width: 0px 1px 1px; border-style: none solid solid; border-color: rgb(0, 0, 0) black black; padding: 1px 1px 10px; border-image: none; width: 101px; height: 23px;'><p style='line-height: 26px; vertical-align: middle;'><span style='color: black; font-family: 宋体; font-size: 14px;'>标的物所有人</span></p></td><td width='516' style='background: white; border-width: 0px 1px 1px 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 1px 1px 10px; width: 516px; height: 23px;' colspan='4'><p style='line-height: 26px; vertical-align: middle;'><span style='color: gray; font-family: 宋体; font-size: 14px;'>张</span><span style='color: gray; font-family:;'>**</span></p></td></tr><tr style='height: 23px;'><td width='101' style='background: white; border-width: 0px 1px 1px; border-style: none solid solid; border-color: rgb(0, 0, 0) black black; padding: 1px 1px 10px; border-image: none; width: 101px; height: 23px;' rowspan='2'><p style='line-height: 26px;'><span style='color: black; font-family:;'> </span></p></td><td width='134' style='background: white; border-width: 0px 1px 1px 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 1px 1px 10px; width: 134px; height: 23px;'><p style='line-height: 26px; vertical-align: middle;'><span style='color: black; font-family: 宋体; font-size: 14px;'>钥匙</span></p></td><td width='383' style='background: white; border-width: 0px 1px 1px 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 1px 1px 10px; width: 383px; height: 23px;' colspan='3'><p style='line-height: 26px; vertical-align: middle;'><span style='color: black; font-family: 宋体;'>有</span><span style='color: black;font-family:Calibri'>1</span><span style='color: black; font-family: 宋体;'>个</span></p></td></tr><tr style='height: 23px;'><td width='134' style='background: white; border-width: 0px 1px 1px 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 1px 1px 10px; width: 134px; height: 23px;'><p style='line-height: 26px; vertical-align: middle;'><span style='color: black; font-family: 宋体; font-size: 14px;'>所在地</span></p></td><td width='383' style='background: white; border-width: 0px 1px 1px 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 1px 1px 10px; width: 383px; height: 23px;' colspan='3'><p style='line-height: 26px; vertical-align: middle;'><span style='color: black; font-family: 宋体;'>沭阳县恒通物流停车场</span></p></td></tr><tr style='height: 23px;'><td width='101' style='background: white; border-width: 0px 1px 1px; border-style: none solid solid; border-color: rgb(0, 0, 0) black black; padding: 1px 1px 10px; border-image: none; width: 101px; height: 23px;'><p style='line-height: 26px; vertical-align: middle;'><span style='color: black; font-family: 宋体; font-size: 14px;'>权利限制情况</span></p></td><td width='134' style='background: white; border-width: 0px 1px 1px 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 1px 1px 10px; width: 134px; height: 23px;'><p style='line-height: 26px; vertical-align: middle;'><span style='color: black; font-family: 宋体; font-size: 14px;'>查封</span></p></td><td width='383' style='background: white; border-width: 0px 1px 1px 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 1px 1px 10px; width: 383px; height: 23px;' colspan='3'><p style='line-height: 26px; vertical-align: middle;'><span style='color: gray; font-family: 宋体; font-size: 14px;'>沭阳县人民法院查封</span></p></td></tr><tr style='height: 23px;'><td width='101' style='background: white; border-width: 0px 1px 1px; border-style: none solid solid; border-color: rgb(0, 0, 0) black black; padding: 1px 1px 10px; border-image: none; width: 101px; height: 23px;'><p style='line-height: 26px; vertical-align: middle;'><span style='color: black; font-family: 宋体; font-size: 14px;'>提供的文件</span></p></td><td width='516' style='background: white; border-width: 0px 1px 1px 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 1px 1px 10px; width: 516px; height: 23px;' colspan='4'><p style='line-height: 26px; vertical-align: middle;'><span style='color: gray; font-family:;'>1</span><span style='color: gray; font-family: 宋体; font-size: 14px;'>、《法院裁定书》；</span><span style='color: gray; font-family:;'>2</span><span style='color: gray; font-family: 宋体; font-size: 14px;'>、《协助执行通知书》；</span><span style='color: gray; font-family:;'>3</span><span style='color: gray; font-family: 宋体; font-size: 14px;'>、《拍卖成交确认书》。</span></p></td></tr><tr style='height: 46px;'><td width='101' style='background: white; border-width: 0px 1px 1px; border-style: none solid solid; border-color: rgb(0, 0, 0) black black; padding: 1px 1px 10px; border-image: none; width: 101px; height: 46px;' rowspan='5'><p style='line-height: 26px; vertical-align: middle;'><span style='color: black; font-family: 宋体; font-size: 14px;'>标的物情况</span></p></td><td width='134' style='background: white; border-width: 0px 1px 1px 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 1px 1px 10px; width: 134px; height: 46px;'><p style='line-height: 26px; vertical-align: middle;'><span style='color: black; font-family: 宋体; font-size: 14px;'>车辆初次登记日期</span></p></td><td width='101' style='background: white; border-width: 0px 1px 1px 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 1px 1px 10px; width: 101px; height: 46px;'><p style='line-height: 26px; vertical-align: middle;'><span style='color: gray; font-family:;'>2018-10-16</span></p></td><td width='135' style='background: white; border-width: 0px 1px 1px 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 1px 1px 10px; width: 135px; height: 46px;'><p style='line-height: 26px; vertical-align: middle;'><span style='color: black; font-family: 宋体; font-size: 14px;'>车辆出厂日期</span></p></td><td width='147' style='background: white; border-width: 0px 1px 1px 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 1px 1px 10px; width: 147px; height: 46px;'><p style='line-height: 26px;'><span style='color: gray; font-family:;'>2</span><span style='color: gray; font-family:;'>017-09-21</span></p></td></tr><tr style='height: 46px;'><td width='134' style='background: white; border-width: 0px 1px 1px 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 1px 1px 10px; width: 134px; height: 46px;'><p style='line-height: 26px; vertical-align: middle;'><span style='color: black; font-family: 宋体; font-size: 14px;'>品牌车型</span></p></td><td width='101' style='background: white; border-width: 0px 1px 1px 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 1px 1px 10px; width: 101px; height: 46px;'><p style='line-height: 26px; vertical-align: middle;'><span style='color: gray; font-family: 宋体; font-size: 14px;'>力帆牌</span></p></td><td width='135' style='background: white; border-width: 0px 1px 1px 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 1px 1px 10px; width: 135px; height: 46px;'><p style='line-height: 26px; vertical-align: middle;'><span style='color: black; font-family:;'>VIN</span><span style='color: black; font-family: 宋体; font-size: 14px;'>码</span></p></td><td width='147' style='background: white; border-width: 0px 1px 1px 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 1px 1px 10px; width: 147px; height: 46px;'><p style='line-height: 26px;'><span style='color: gray; font-family:;'>LCN64EE59H0018041</span></p></td></tr><tr style='height: 23px;'><td width='134' style='background: white; border-width: 0px 1px 1px 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 1px 1px 10px; width: 134px; height: 23px;'><p style='line-height: 26px; vertical-align: middle;'><span style='color: black; font-family: 宋体; font-size: 14px;'>车辆类型</span></p></td><td width='101' style='background: white; border-width: 0px 1px 1px 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 1px 1px 10px; width: 101px; height: 23px;'><p style='line-height: 26px; vertical-align: middle;'><span style='color: gray; font-family: 宋体; font-size: 14px;'>小型汽车</span></p></td><td width='135' style='background: white; border-width: 0px 1px 1px 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 1px 1px 10px; width: 135px; height: 23px;'><p style='line-height: 26px; vertical-align: middle;'><span style='color: black; font-family: 宋体;'>排量</span></p></td><td width='147' style='background: white; border-width: 0px 1px 1px 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 1px 1px 10px; width: 147px; height: 23px;'><p style='line-height: 26px;'><span style='color: black;font-family:Calibri'>1794 ml</span></p></td></tr><tr style='height: 23px;'><td width='134' style='background: white; border-width: 0px 1px 1px 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 1px 1px 10px; width: 134px; height: 23px;'><p style='line-height: 26px; vertical-align: middle;'><span style='color: black; font-family: 宋体; font-size: 14px;'>发动机号</span></p></td><td width='101' style='background: white; border-width: 0px 1px 1px 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 1px 1px 10px; width: 101px; height: 23px;'><p style='line-height: 26px;'><span style='color: gray; font-family:;'>170900972</span></p></td><td width='135' style='background: white; border-width: 0px 1px 1px 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 1px 1px 10px; width: 135px; height: 23px;'><p style='line-height: 26px; vertical-align: middle;'><span style='color: black; font-family: 宋体; font-size: 14px;'>功率</span></p></td><td width='147' style='background: white; border-width: 0px 1px 1px 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 1px 1px 10px; width: 147px; height: 23px;'><p style='line-height: 26px;'><span style='color: rgb(102, 102, 102); font-family:;'>98 kw</span></p></td></tr><tr style='height: 23px;'><td width='134' style='background: white; border-width: 0px 1px 1px 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 1px 1px 10px; width: 134px; height: 23px;'><p style='line-height: 26px; vertical-align: middle;'><span style='color: black; font-family: 宋体; font-size: 14px;'>车身颜色</span></p></td><td width='101' style='background: white; border-width: 0px 1px 1px 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 1px 1px 10px; width: 101px; height: 23px;'><p style='line-height: 26px;'><span style='color: rgb(102, 102, 102); font-family: 宋体; font-size: 14px;'>白色</span></p></td><td width='135' style='background: white; border-width: 0px 1px 1px 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 1px 1px 10px; width: 135px; height: 23px;'><p style='line-height: 26px; vertical-align: middle;'><span style='color: black; font-family: 宋体; font-size: 14px;'>违章记录</span></p></td><td width='147' style='background: white; border-width: 0px 1px 1px 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 1px 1px 10px; width: 147px; height: 23px;'><p style='line-height: 26px;'><span style='color: rgb(102, 102, 102); font-family: 宋体; font-size: 12px;'>请买受人自行查询</span></p></td></tr><tr style='height: 23px;'><td width='101' style='background: white; border-width: 0px 1px 1px; border-style: none solid solid; border-color: rgb(0, 0, 0) black black; padding: 1px 1px 10px; border-image: none; width: 101px; height: 23px;'><p style='line-height: 26px; vertical-align: middle;'><span style='color: black; font-family: 宋体; font-size: 14px;'>标的物估值</span></p></td><td width='134' style='background: white; border-width: 0px 1px 1px 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 1px 1px 10px; width: 134px; height: 23px;'><p style='line-height: 26px; vertical-align: middle;'><span style='color: black; font-family: 宋体; font-size: 14px;'>标的物评估价</span></p></td><td width='383' style='background: white; border-width: 0px 1px 1px 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 1px 1px 10px; width: 383px; height: 23px;' colspan='3'><p style='line-height: 26px; vertical-align: middle;'><span style='color: gray; font-family:;'>9834</span><span style='color: gray; font-family: 宋体; font-size: 14px;'>元</span></p></td></tr><tr style='height: 23px;'><td width='101' style='background: white; border-width: 0px 1px 1px; border-style: none solid solid; border-color: rgb(0, 0, 0) black black; padding: 1px 1px 10px; border-image: none; width: 101px; height: 23px;' rowspan='2'><p style='line-height: 26px; vertical-align: middle;'><span style='color: black; font-family: 宋体; font-size: 14px;'>标的物费用</span></p></td><td width='516' style='background: white; border-width: 0px 1px 1px 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 1px 1px 10px; width: 516px; height: 23px;' colspan='4'><p style='text-align: center; line-height: 26px; vertical-align: middle;'><strong><span style='color: red; font-family: 宋体; font-size: 14px;'>违章费用由买受人承担</span></strong></p><p style='text-align: center; line-height: 26px; vertical-align: middle;'><strong><span style='color: red; font-family: 宋体; font-size: 14px;'>停车费等费用请买受人自行核实，由买受人承担</span></strong><strong><span style='color: red; font-family:;'><br/>     </span></strong><strong><span style='color: red; font-family: 宋体; font-size: 14px;'>停车费收费标准：扣押前三月<span>13</span>元</span></strong><strong><span style='color: red; font-family:;'>/</span></strong><strong><span style='color: red; font-family: 宋体; font-size: 14px;'>天，超出</span></strong><strong><span style='color: red; font-family:;'>3</span></strong><strong><span style='color: red; font-family: 宋体; font-size: 14px;'>个月，超出部分</span></strong><strong><span style='color: red; font-family:;'>8</span></strong><strong><span style='color: red; font-family: 宋体; font-size: 14px;'>元</span></strong><strong><span style='color: red; font-family:;'>/</span></strong><strong><span style='color: red; font-family: 宋体; font-size: 14px;'>天</span></strong></p></td></tr><tr style='height: 23px;'><td width='134' style='background: white; border-width: 0px 1px 1px 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 1px 1px 10px; width: 134px; height: 23px;'><p style='line-height: 26px; vertical-align: middle;'><span style='color: black; font-family: 宋体; font-size: 14px;'>扣押时间</span></p></td><td width='383' style='background: white; border-width: 0px 1px 1px 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 1px 1px 10px; width: 383px; height: 23px;' colspan='3'><p style='line-height: 26px;'><span style='color: gray; font-family:;'>20</span><span style='color: gray; font-family:;'>22-3-1</span></p></td></tr></tbody></table><p></p><br><a href='//img30.360buyimg.com/popWaterMark/jfs/t1/16936/14/17249/3950592/62ba63a0Ec32a355c/25a3a813085364d9.jpg' target='_blank'><img src ='//img30.360buyimg.com/popWaterMark/s1000x750_jfs/t1/16936/14/17249/3950592/62ba63a0Ec32a355c/25a3a813085364d9.jpg'/></a><br><br><a href='//img30.360buyimg.com/popWaterMark/jfs/t1/97497/27/28964/4853911/62ba63a1E1d17587c/4efff0916aaafa77.jpg' target='_blank'><img src ='//img30.360buyimg.com/popWaterMark/s1000x750_jfs/t1/97497/27/28964/4853911/62ba63a1E1d17587c/4efff0916aaafa77.jpg'/></a><br><br><a href='//img30.360buyimg.com/popWaterMark/jfs/t1/183576/29/25155/3759517/62ba63a2Ef503d6d1/978dcf7012bb4c7f.jpg' target='_blank'><img src ='//img30.360buyimg.com/popWaterMark/s1000x750_jfs/t1/183576/29/25155/3759517/62ba63a2Ef503d6d1/978dcf7012bb4c7f.jpg'/></a><br><br><a href='//img30.360buyimg.com/popWaterMark/jfs/t1/189564/4/26244/4277362/62ba63a3Ed3cd6912/62d3fa6137380b18.jpg' target='_blank'><img src ='//img30.360buyimg.com/popWaterMark/s1000x750_jfs/t1/189564/4/26244/4277362/62ba63a3Ed3cd6912/62d3fa6137380b18.jpg'/></a><br><br><a href='//img30.360buyimg.com/popWaterMark/jfs/t1/89184/35/28624/3886185/62ba63a3Ec1c83ac4/48f1d568ae8c2ac2.jpg' target='_blank'><img src ='//img30.360buyimg.com/popWaterMark/s1000x750_jfs/t1/89184/35/28624/3886185/62ba63a3Ec1c83ac4/48f1d568ae8c2ac2.jpg'/></a><br><br><a href='//img30.360buyimg.com/popWaterMark/jfs/t1/73721/24/20170/4207306/62ba63a4E10a8e65b/4f6c92c315b62383.jpg' target='_blank'><img src ='//img30.360buyimg.com/popWaterMark/s1000x750_jfs/t1/73721/24/20170/4207306/62ba63a4E10a8e65b/4f6c92c315b62383.jpg'/></a><br><br><a href='//img30.360buyimg.com/popWaterMark/jfs/t1/24686/29/17892/3864939/62ba63a5Ed932671b/9850dc49d3204a66.jpg' target='_blank'><img src ='//img30.360buyimg.com/popWaterMark/s1000x750_jfs/t1/24686/29/17892/3864939/62ba63a5Ed932671b/9850dc49d3204a66.jpg'/></a><br><br><a href='//img30.360buyimg.com/popWaterMark/jfs/t1/115800/3/27281/3074153/62ba63a5E3f178924/7af5c93b9445723e.jpg' target='_blank'><img src ='//img30.360buyimg.com/popWaterMark/s1000x750_jfs/t1/115800/3/27281/3074153/62ba63a5E3f178924/7af5c93b9445723e.jpg'/></a><br>",
+    "message": "成功",
+    "status": 0
+}
+
+//取得拍卖公告
+//https://api.m.jd.com/api?appid=paimai&functionId=queryAnnouncement&body={%22albumId%22:3093186}
+{
+    "code": 0,
+    "data": {
+        "content": "<p><span style=\"color: rgb(0, 0, 0); font-family: 等线; font-size: 20px;\">竞拍前请务必遵照《竞买公告》的要求，进行实地看样、调查标的物信息（如过户要求、违章情况等）、了解竞买资质、委托代理及尾款支付方式等内容。</span></p><p><strong><span style=\"color: rgb(0, 0, 0); font-family: 等线; font-size: 20px;\">如违反相关规定，您的保证金可能会被法院划扣并产生其他司法处罚等后果，请理性参拍！</span></strong></p><p style=\"text-align: center;\"><strong><span style=\"font-family: 等线; font-size: 24px;\"><span style=\"color: rgb(0, 0, 0);\">江苏省沭阳县人民法院关于</span><span style=\"color: red;\">苏</span></span></strong><strong><span style=\"color: red; font-family: Times New Roman; font-size: 24px;\">NA386P</span></strong><strong><span style=\"color: red; font-family: 等线; font-size: 24px;\">车辆</span></strong><strong><span style=\"color: rgb(0, 0, 0); font-family: 等线; font-size: 24px;\">的拍卖公告</span></strong></p><p style=\"text-align: center;\"><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"font-family: Times New Roman; font-size: 24px;\">(</span></strong><strong><span style=\"font-family: 等线; font-size: 24px;\">第一次拍卖</span></strong><strong><span style=\"font-family: Times New Roman; font-size: 24px;\">)</span></strong></span></p><p><span style=\"font-family: 等线; font-size: 20px;\"><span style=\"color: rgb(0, 0, 0);\">江苏省沭阳县人民法院将于</span><span style=\"color: red;\">2022</span><span style=\"color: red;\">年<span>07</span>月<span>14</span>日<span>10</span>时至<span>2022</span>年<span>07</span>月<span>15</span>日<span>10</span>时止</span><span style=\"color: rgb(0, 0, 0);\">（延时除外）在江苏省沭阳县人民法院京东网司法拍卖网络平台（网址：<span>http://sifa.jd.com/1274,</span>户名：江苏省沭阳县人民法院）进行公开拍卖活动，现公告如下：</span></span></p><p><span style=\"font-family: 等线; font-size: 20px;\"><span style=\"color: rgb(0, 0, 0);\">一、拍卖标的：</span><span style=\"color: red;\">苏<span>NA386P</span>车辆</span></span></p><p><span style=\"font-family: 等线; font-size: 20px;\"><span style=\"color: rgb(0, 0, 0);\">起拍价：</span><span style=\"color: red;\">6884</span><span style=\"color: black;\">元</span><span style=\"color: rgb(0, 0, 0);\">，保证金：</span><span style=\"color: red;\">1376</span><span style=\"color: black;\">元</span><span style=\"color: rgb(0, 0, 0);\">，增价幅度：</span><span style=\"color: red;\">137</span><span style=\"color: black;\">元</span><span style=\"color: rgb(0, 0, 0);\">。</span></span></p><p><span style=\"color: red; font-family: 等线; font-size: 20px;\">苏<span>NA386P</span></span><span style=\"color: red; font-family: 等线; font-size: 20px;\">力帆牌小型汽车</span><span style=\"color: black; font-family: 等线; font-size: 20px;\">，车辆型号为</span><span style=\"color: red; font-family: 等线; font-size: 20px;\">LF6470</span><span style=\"color: black; font-family: 等线; font-size: 20px;\">，车身颜色为</span><span style=\"color: red; font-family: 等线; font-size: 20px;\">白色</span><span style=\"color: black; font-family: 等线; font-size: 20px;\">，车架号：</span><span style=\"color: red; font-family: 等线; font-size: 20px;\">LCN64EE59H0018041</span><span style=\"color: black; font-family: 等线; font-size: 20px;\">，发动机号<span>:170900972</span>，</span><span style=\"color: black; font-family: 等线; font-size: 20px;\">上述车辆</span><span style=\"color: black; font-family: 等线; font-size: 20px;\">发动机号</span><span style=\"color: black; font-family: 等线; font-size: 20px;\">、</span><span style=\"color: black; font-family: 等线; font-size: 20px;\">排量</span><span style=\"color: black; font-family: 等线; font-size: 20px;\">、</span><span style=\"color: black; font-family: 等线; font-size: 20px;\">环保标准</span><span style=\"color: black; font-family: 等线; font-size: 20px;\">、</span><span style=\"color: black; font-family: 等线; font-size: 20px;\">出厂日期</span><span style=\"color: black; font-family: 等线; font-size: 20px;\">以及是否发生交通事故、保险、违章、停车费用等现状，</span><span style=\"color: red; font-family: 等线; font-size: 20px;\">由买受人自行向车辆管理部门核实。</span></p><p><span style=\"color: red; font-family: 等线; font-size: 20px;\">注：</span></p><p><span style=\"color: red; font-family: 等线; font-size: 12px;\">1.</span><span style=\"color: red; font-family: 等线; font-size: 12px;\">违章情况请买受人自行查询。</span></p><p><span style=\"color: red; font-family: 等线; font-size: 12px;\">2.</span><span style=\"color: red; font-family: 等线; font-size: 12px;\">买受人需登记过户的，请咨询当地车辆管理部门政策规定（涉及在非宿迁范围内违章的，该违章扣分由买受人自行处理），并自行承担因环保排放不符合标准、车辆硬件瑕疵及其他办证文件不齐等问题产生的不能上牌后果。</span></p><p><span style=\"color: red; font-family: 等线; font-size: 12px;\">3.</span><span style=\"color: red; font-family: 等线; font-size: 12px;\">标的物转让登记手续由买受人自行办理，所涉及的一切税费、费用由买受人自行承担。</span></p><p><span style=\"color: rgb(0, 0, 0); font-family: 等线; font-size: 20px;\">二、竞买人条件：凡具备完全民事行为能力的自然人、法人和其他组织均可参加竞买。</span></p><p><span style=\"color: rgb(0, 0, 0); font-family: 等线; font-size: 20px;\">参与竞买需开设京东和京东账户。如参与竞买人未开设京东账户，可委托代理人（具备完全民事行为能力的自然人）进行，但须在竞买开始前向江苏省沭阳县人民法院办理委托手续；竞买成功后，竞买人（法定代表人、其他组织的负责人）须与委托代理人一同到江苏省沭阳县人民法院办理交接手续。如委托手续不全，竞买活动认定为委托代理人的个人行为，由竞买人自行承担相应法律后果。</span></p><p><strong><span style=\"font-family: 等线; font-size: 20px;\"><span style=\"color: rgb(0, 0, 0);\">委托手续应于</span><span style=\"color: black;\">拍卖开始两个工作日</span><span style=\"color: rgb(0, 0, 0);\">前向江苏省沭阳县人民法院提交合法有效的证明，资格经法院确认后方能进行委托。</span></span></strong></p><p><span style=\"color: rgb(0, 0, 0); font-family: 等线; font-size: 20px;\">因不符合条件参加竞买的，由竞买人自行承担相应的法律责任。</span></p><p><strong><span style=\"color: rgb(0, 0, 0); font-family: 等线; font-size: 20px;\">三、特别提醒：（详见标的物介绍）拍卖人对拍卖标的物所作的说明和提供的图片等，仅供竞买人参考，不构成对标的物的任何担保。竞买人一旦作出竞买决定，即表明已完全了解，并接受标的物的现状和一切已知及未知的瑕疵，责任自负。标的物以实物现状为准，法院不承担拍卖标的物瑕疵保证。特别提醒，有意者请亲自实地看样，未看样的竞买人视为对本标的物现状的确认。</span></strong></p><p><strong><span style=\"color: red; font-family: 等线; font-size: 20px;\">四、本次拍卖活动设置延时出价功能，在拍卖活动结束前，每最后<span>5</span>分钟如果有竞买人出价，就自动延迟<span>5</span>分钟。</span></strong></p><p><span style=\"font-family: 等线; font-size: 20px;\"><span style=\"color: rgb(0, 0, 0);\">五、拍卖方式：</span><strong><span style=\"color: red;\">设有保留价的增价拍卖方式，保留价等于起拍价，至少一人报名且出价不低于起拍价，方可成交。</span></strong></span></p><p><span style=\"color: red; font-family: 等线; font-size: 20px;\">六、拍卖成交买受人付清全部拍卖价款后，凭法院出具的执行裁定书、协助执行通知书及拍卖成交确认书自行至相关管理部门办理标的物权属变更手续。办理过程中所涉及的的一切税、费和所须补交的相关税、费（包括但不限于车辆交易中规定缴纳的各种费用）均由买受人自行承担。具体费用请竞买人于拍卖前至相关单位自行查询，与拍卖人无涉。</span></p><p><span style=\"color: rgb(0, 0, 0); font-family: 等线; font-size: 20px;\">七、对上述标的权属有异议者，请于开拍三个工作日前向本院提出书面异议。</span></p><p><span style=\"color: rgb(0, 0, 0); font-family: 等线; font-size: 20px;\">八、与本标的物有关人员<span>[</span>案件当事人、担保物权人（质押权人）、优先购买权人等<span>]</span>均可参加竞拍，不参加竞拍的请关注本次拍卖活动的整个过程。</span></p><p><strong><span style=\"font-family: 等线; font-size: 20px;\"><span style=\"color: rgb(0, 0, 0);\">申请优先购买权的竞买人，请在标的开拍</span><span style=\"color: red;\">两个工作日</span><span style=\"color: rgb(0, 0, 0);\">前向法院提供优先购买权利人证明材料，逾期未提交的视为放弃优先购买权利。</span></span></strong></p><p><span style=\"color: rgb(0, 0, 0); font-family: 等线; font-size: 20px;\">下列机构和人员不得竞买并不得委托他人代为竞买与其行为相关的拍卖财产：</span></p><p><span style=\"color: rgb(0, 0, 0); font-family: 等线; font-size: 20px;\">（一）沭阳县人民法院工作人员（含聘用人员）及其近亲属；</span></p><p><span style=\"color: rgb(0, 0, 0); font-family: 等线; font-size: 20px;\">（二）承担拍卖辅助工作的工作人员及其近亲属；</span></p><p><span style=\"color: rgb(0, 0, 0); font-family: 等线; font-size: 20px;\">（三）网络服务提供者的工作人员及其近亲属；</span></p><p><span style=\"color: rgb(0, 0, 0); font-family: 等线; font-size: 20px;\">（四）法律规定的其他人员。</span></p><p><span style=\"color: rgb(0, 0, 0); font-family: 等线; font-size: 20px;\">九、拍卖竞价前将通过网拍系统将在竞买人京东账户内冻结相应资金作为应缴的保证金，拍卖结束后未能竞得者冻结的保证金自动解冻，冻结期间不计利息。</span></p><p><span style=\"background: white; color: black; font-family: 等线; font-size: 20px;\">本标的物竞得者原冻结的保证金自动转入法院指定账户，<strong>拍卖余款（建议通过银行付款）在成交之日起<span>10</span>日内缴纳，可通过银行付款或者京东网上支付，详细请咨询法院：</strong></span></p><p><span style=\"background: white; color: black; font-family: 等线; font-size: 20px;\">1</span><span style=\"background: white; color: black; font-family: 等线; font-size: 20px;\">、银行付款方式：银行汇款到法院指定账户<strong>（户名：</strong></span><strong><span style=\"background: white; color: red; font-family: 等线; font-size: 20px;\">沭阳县人民法院案款专户</span></strong><strong><span style=\"background: white; color: black; font-family: 等线; font-size: 20px;\">，开户银行：</span></strong><strong><span style=\"background: white; color: red; font-family: 等线; font-size: 20px;\">中国银行股份有限公司沭阳北京路支行</span></strong><strong><span style=\"background: white; color: black; font-family: 等线; font-size: 20px;\">，账号</span></strong><strong><span style=\"background: white; color: red; font-family: 等线; font-size: 20px;\">6232636100135460296</span></strong><strong><span style=\"background: white; color: black; font-family: 等线; font-size: 20px;\">），填写缴款单时请在备注中注明本案案号<span>[</span></span></strong><strong><span style=\"background: white; color: red; font-family: 等线; font-size: 20px;\">(2021)</span></strong><strong><span style=\"background: white; color: red; font-family: 等线; font-size: 20px;\">苏<span>1322</span>执<span>5523</span>号</span></strong><strong><span style=\"background: white; color: black; font-family: 等线; font-size: 20px;\">]</span></strong><strong><span style=\"background: white; color: black; font-family: 等线; font-size: 20px;\">拍卖款。</span></strong></p><p><span style=\"background: white; color: black; font-family: 等线; font-size: 20px;\">2</span><span style=\"background: white; color: black; font-family: 等线; font-size: 20px;\">、京东网上付款方式：登录我的京东<span>-</span>我的拍卖支付，付款教程：</span></p><p><span><a href=\"https://help.jd.com/user/issue/359-1156.html#5\" target=\"_blank\"><span style=\"background: white; color: rgb(5, 99, 193); font-family: 等线; font-size: 20px;\">https://help.jd.com/user/issue/359-1156.html#5</span></a></span></p><p><span style=\"background: white; color: black; font-family: 等线; font-size: 20px;\">3</span><span style=\"background: white; color: black; font-family: 等线; font-size: 20px;\">、拍卖未成交的，竞买人通过网络报名缴纳冻结的保证金自动解冻，冻结期间不计利息。</span></p><p><span style=\"color: black; font-family: 等线; font-size: 20px;\">法院负责办理标的物他项权证的解除等手续，在拍卖款项交付法院后一百八十个工作日内办理标的物的交付手续。相关当事人或案外人员提出异议或异议致诉，则依相关法律规定对异议时间予以扣除。</span></p><p><strong><span style=\"background: white; color: black; font-family: 等线; font-size: 20px;\">十、拍卖成交后买受人悔拍的，法院可以裁定重新拍卖，重新拍卖时，原买受人不得参加竞买。对原买受人交纳的保证金法院不予退还，依次用于支付拍卖产生的费用损失、弥补重新拍卖价款低于原拍卖价款的差价、冲抵本案被执行人的债务以及与拍卖财产相关的被执行人的债务。重新拍卖的价款若低于原拍卖价款，所造成的差价、费用损失等，由原买受人承担。若其所缴纳的保证金足以弥补该差价等费用损失的，则以该保证金填补差价，原买受人无须另行承担责任。若其所缴纳的保证金不足以弥补该差价等费用损失的，则由原买受人承担不足部分。</span></strong></p><p style=\"line-height: 22px;\"><span style=\"font-family: 等线; font-size: 20px;\"><span style=\"color: rgb(0, 0, 0);\">十</span><strong><span style=\"background: white; color: black;\">一</span></strong><span style=\"color: rgb(0, 0, 0);\">、在司法拍卖中，因部分标的物本身价值较高，其起拍价、保证金、竞拍成交价相对较高，竞买人参与竞价，支付保证金及余款可能会遇到当天限额无法支付的情况，请竞买人根据自身情况选择网上充值银行。各大银行充值和支付的限额情况可上网查询，网址：</span></span></p><p style=\"line-height: 22px; text-indent: 32px;\"><span><a href=\"https://help.jd.com/user/issue/359-1659.html\" target=\"_blank\"><span style=\"color: rgb(5, 99, 193); font-family: 等线; font-size: 20px;\">https://help.jd.com/user/issue/359-1659.html</span></a></span></p><p><strong><span style=\"background: white; color: black; font-family: 等线; font-size: 20px;\">十二、依照法释〔<span>2016</span>〕<span>18</span>号《最高人民法院关于人民法院网络司法拍卖若干问题的规定》，竞买人成功竞得网拍标的物后，京东网拍平台将生成相应《司法拍卖网络竞价成功确认书》，确认书中载明实际买受人姓名、网拍竞买号信息。需办理委托（包含直系亲属之间的委托、公司委托企业法人等）的竞买人必须在标的开拍一个工作日前将委托手续交至法院，交接委托材料时本院会提供执行局盖印的交接单，如无交接单的视为未向法院提供委托手续，本院不予认可。同时因系统限制暂不支持多人委托一人的情况，请竞买人注意。</span></strong></p><p style=\"text-indent: 40px;\"><span style=\"color: red; font-family: 等线; font-size: 20px;\"><strong>本院已委托江苏京东信息技术有限公司在拍卖期间免费提供对拍卖标的物的相关信息的咨询及组织看样服务。所有拍卖过程与地方中介、其他机构无任何关系，请各意向竞买人对以竞拍咨询、引领看样名义进行的收费行为提高警惕，以免造成损失。请认准法院授权机构<span>“</span>江苏京东信息技术有限公司<span>”</span>，咨询电话：<span> 400-6229586</span>或登陆访问<span>sifa.jd.com“</span>京东拍卖<span>”</span>网站、关注微信公众号或者京东小程序<span>“</span>京东拍卖<span>”</span>自助预约。也请广大意向竞买人对发现的各种违规行为进行及时举报，法院举报电话：<span>0527-83519331</span></strong></span></p><p><span style=\"color: rgb(0, 0, 0); font-family: 等线; font-size: 20px;\">详细信息可在<span>“</span>人民法院诉讼资产网<span>(</span></span><span><a href=\"http://www.rmfysszc.gov.cn)/\" target=\"_blank\"><span style=\"color: rgb(5, 99, 193);\"><span style=\"font-family: 等线; font-size: 20px;\">www.rmfysszc.gov.cn)”</span><span style=\"font-family: 等线; font-size: 20px;\"><span>上查询</span></span></span></a></span><span style=\"color: rgb(0, 0, 0); font-family: 等线; font-size: 20px;\">。</span></p><p><span style=\"color: rgb(0, 0, 0); font-family: 等线; font-size: 20px;\">竞买人在拍卖竞价前请务必再仔细阅读本院发布的拍卖须知。</span></p><p><span style=\"color: rgb(0, 0, 0); font-family: 等线; font-size: 20px;\">本规则其他未尽事宜，请向拍卖人咨询。</span></p><p><strong><span style=\"color: red; font-family: 等线; font-size: 20px;\">联系人：</span></strong><strong><span style=\"color: red; font-family: 等线; font-size: 20px;\">江苏京东信息技术有限公司</span></strong></p><p><strong><span style=\"color: red; font-family: 等线; font-size: 20px;\">咨询电话：<span>400-6229586</span></span></strong></p><p style=\"text-indent: 100px;\"><strong><span style=\"color: red; font-family: 等线; font-size: 20px;\">0527-83911883</span></strong></p><p><span style=\"color: rgb(0, 0, 0); font-family: 等线; font-size: 20px;\">法院监督电话：<span>0527—83519168</span></span></p><p><span style=\"color: rgb(0, 0, 0); font-family: 等线; font-size: 20px;\">京东技术咨询：<span>400-622-9586</span></span></p><p><span style=\"color: rgb(0, 0, 0); font-family: 等线; font-size: 20px;\">联系地址：江苏省沭阳县人民法院执行局（沭阳县开发区义乌路西侧）</span></p><p><span style=\"color: rgb(0, 0, 0);\"><span style=\"font-family: 等线; font-size: 20px;\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 江苏省沭阳县人民法院执行局</span></span></p><p></p>",
+        "id": 4780954,
+        "title": "沭阳县人民法院关于苏NA386P车辆（第一次拍卖）的公告"
+    },
+    "message": "成功",
+    "status": 0
+}
