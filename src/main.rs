@@ -19,7 +19,7 @@ async fn main() {
 
     // 京东   https://paimai.jd.com/289011596
     // let url = "https://paimai.jd.com/289011596";
-    let belong = 2; //所属平台（1.淘宝、2.京东）
+    let belong = 1; //所属平台（1.淘宝、2.京东）
 
     if belong == 1 {
         // 抓取
@@ -27,7 +27,7 @@ async fn main() {
         let result = crate::http::http_request(url).await;
         let response = result.unwrap();
         let html = response.html.as_str();
-        println!("抓取到的html=========={}", html);
+        // println!("抓取到的html=========={}", html);
         // let html = include_str!("html/taobao.html");
         let data = crate::parse::taobao_select(html).await;
         if data.is_none() {
@@ -37,7 +37,7 @@ async fn main() {
         let data = data.unwrap();
         insert_table(data, url); //插入到表
     } else {
-        let paimai_id = "288869589";
+        let paimai_id = "289632697";
         let url = format!("https://paimai.jd.com/{}", paimai_id);
         let url = url.to_owned();
 
@@ -68,9 +68,12 @@ pub fn insert_table(data: crate::parse::Reptile, url: &str) {
     let assess_price = (data.assess_price * 100.) as i64;
     let margin = (data.margin * 100.) as i64;
 
-    //毫秒和秒相差1000
-    let start_time = chrono::prelude::NaiveDateTime::from_timestamp(data.start_time / 1000, 0);
-    let end_time = chrono::prelude::NaiveDateTime::from_timestamp(data.end_time / 1000, 0);
+    //毫秒和秒相差1000,但这样转换,不知道为何少了8个小时,所以主动加上去 8*3600
+    let start_time =
+        chrono::prelude::NaiveDateTime::from_timestamp(data.start_time / 1000 + 8 * 3600, 0);
+    let end_time =
+        chrono::prelude::NaiveDateTime::from_timestamp(data.end_time / 1000 + 8 * 3600, 0);
+    let now_date_time = crate::common::now_naive_date_time();
 
     let new_data = NewLawsuitReptile {
         title: data.title,
@@ -86,7 +89,7 @@ pub fn insert_table(data: crate::parse::Reptile, url: &str) {
         belong: Some(data.belong), //所属平台（1.淘宝、2.京东）
         stage: Some(data.stage),   //拍卖阶段（一拍、二拍、变卖、撤回）
         status: 1,                 //状态（1待开拍、2竞拍中、已结束:3成交，4流拍、0无效或撤回）
-        create_time: None,
+        create_time: Some(now_date_time),
     };
 
     let insert_id = new_data.insert();

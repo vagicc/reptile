@@ -5,7 +5,17 @@
 
 --  法拍详情页：
 
---   推荐文字说明
+--  法拍车信息表
+ 
+-- 法拍车文章推荐lawsuit_autocar_article
+CREATE TABLE lawsuit_autocar_article(
+  "laid" SERIAL PRIMARY KEY REFERENCES lawsuit_autocar(id),
+  "article_content" TEXT DEFAULT NULL,
+  "create_time" TIMESTAMP WITHOUT time ZONE DEFAULT clock_timestamp()
+);
+COMMENT ON TABLE lawsuit_autocar_article IS '视频详情表';
+COMMENT ON COLUMN lawsuit_autocar_article.laid IS '司法拍卖机动车表ID';
+COMMENT ON COLUMN lawsuit_autocar_article.article_content IS '文章内容';
 
 -- 车辆相册表
 CREATE TABLE lawsuit_autocar_photo(
@@ -44,24 +54,31 @@ COMMENT ON COLUMN lawsuit_autocar_photo.front_cover IS '是否为封面图';
 
 CREATE TABLE lawsuit_autocar(
   "id" SERIAL PRIMARY KEY,
-  "acid" INTEGER DEFAULT NULL,
   "title" CHARACTER VARYING(255) NOT NULL,
   "summary" CHARACTER VARYING(255) NOT NULL,
   "list_img" CHARACTER VARYING(255) DEFAULT NULL,
-  "visit" bigint NOT NULL DEFAULT 0,
-
+  "license" CHARACTER VARYING(16) DEFAULT NULL,
+  "violating" CHARACTER VARYING(80) DEFAULT NULL,
+  "universal_model" CHARACTER VARYING(38) DEFAULT NULL,
+  "gearbox" CHARACTER VARYING(18) DEFAULT NULL,
+  "fuel_type" CHARACTER VARYING(18) DEFAULT NULL,
+  "kilometer" INTEGER DEFAULT NULL,
+  "registration" DATE DEFAULT NULL,
+  "production_date" DATE DEFAULT NULL,
+  "autocar_model" CHARACTER VARYING(38) DEFAULT NULL,
+  "vim" CHARACTER VARYING(255) DEFAULT NULL,
+  "engine_number" CHARACTER VARYING(50) DEFAULT NULL,
+  "emission" CHARACTER VARYING(5) DEFAULT NULL,
   "price_base" MONEY NOT NULL DEFAULT 0,
   "current_price" MONEY NOT NULL DEFAULT 0,
   "assess_price" MONEY NOT NULL DEFAULT 0,
   "margin" MONEY NOT NULL DEFAULT 0,
   "recommended_price" MONEY NOT NULL DEFAULT 0,
-
   "start_time" TIMESTAMP WITHOUT time ZONE,
   "end_time" TIMESTAMP WITHOUT time ZONE,
   "recommend" SMALLINT NOT NULL DEFAULT 1,
- 
-  "lng" decimal DEFAULT NULL,
-  "lat" decimal DEFAULT NULL,
+  -- "lng" decimal DEFAULT NULL,
+  -- "lat" decimal DEFAULT NULL,
   "address" CHARACTER VARYING(250) DEFAULT NULL,
   "disposal_unit" CHARACTER VARYING(255) DEFAULT NULL,
   "external_url" CHARACTER VARYING(255) DEFAULT NULL,
@@ -71,14 +88,23 @@ CREATE TABLE lawsuit_autocar(
   "show" BOOLEAN DEFAULT TRUE,
   "create_time" TIMESTAMP WITHOUT time ZONE DEFAULT clock_timestamp()
 );
-CREATE INDEX idx_lawsuit_autocar_acid ON lawsuit_autocar USING btree(acid);
 CREATE INDEX idx_lawsuit_autocar_status ON lawsuit_autocar USING btree(status);
 COMMENT ON TABLE lawsuit_autocar IS '司法拍卖机动车表';
-COMMENT ON COLUMN lawsuit_autocar.acid IS '车辆分类表ID';
 COMMENT ON COLUMN lawsuit_autocar.title IS '车标题';
 COMMENT ON COLUMN lawsuit_autocar.summary IS '车摘要';
 COMMENT ON COLUMN lawsuit_autocar.list_img IS '封面图-列表图';
-COMMENT ON COLUMN lawsuit_autocar.visit IS '浏览次数';
+COMMENT ON COLUMN lawsuit_autocar.license IS '车牌号';
+COMMENT ON COLUMN lawsuit_autocar.violating IS '违章';
+COMMENT ON COLUMN lawsuit_autocar.universal_model IS '通用车型号';
+COMMENT ON COLUMN lawsuit_autocar.gearbox IS '变速箱(手动6档,自动档)';
+COMMENT ON COLUMN lawsuit_autocar.fuel_type IS '燃料:汽油,柴油,纯电,油电混合,氢能电池,氢能';
+COMMENT ON COLUMN lawsuit_autocar.kilometer IS '已行驶公里数';
+COMMENT ON COLUMN lawsuit_autocar.registration IS '注册登记日期';
+COMMENT ON COLUMN lawsuit_autocar.production_date IS '生产日期';
+COMMENT ON COLUMN lawsuit_autocar.autocar_model IS '厂家车型';
+COMMENT ON COLUMN lawsuit_autocar.vim IS '车架号';
+COMMENT ON COLUMN lawsuit_autocar.engine_number IS '发动机号';
+COMMENT ON COLUMN lawsuit_autocar.emission IS '排放阶段';
 COMMENT ON COLUMN lawsuit_autocar.price_base IS '起拍价';
 COMMENT ON COLUMN lawsuit_autocar.current_price IS '当前价';
 COMMENT ON COLUMN lawsuit_autocar.assess_price IS '评估价';
@@ -87,8 +113,8 @@ COMMENT ON COLUMN lawsuit_autocar.recommended_price IS '最高推荐价';
 COMMENT ON COLUMN lawsuit_autocar.start_time IS '开始时间';
 COMMENT ON COLUMN lawsuit_autocar.end_time IS '结束时间';
 COMMENT ON COLUMN lawsuit_autocar.recommend IS '推荐星数1-10';
-COMMENT ON COLUMN lawsuit_autocar.lng IS '坐标:经度';
-COMMENT ON COLUMN lawsuit_autocar.lat IS '坐标:纬度';
+-- COMMENT ON COLUMN lawsuit_autocar.lng IS '坐标:经度';
+-- COMMENT ON COLUMN lawsuit_autocar.lat IS '坐标:纬度';
 COMMENT ON COLUMN lawsuit_autocar.address IS '地址';
 COMMENT ON COLUMN lawsuit_autocar.disposal_unit IS '处置单位:所属法院';
 COMMENT ON COLUMN lawsuit_autocar.external_url IS '拍卖详情URL';
@@ -166,7 +192,7 @@ COMMENT ON COLUMN lawsuit_reptile.external_url IS '拍卖详情URL';
 COMMENT ON COLUMN lawsuit_reptile.belong IS '所属平台（1.淘宝、2.京东）';
 COMMENT ON COLUMN lawsuit_reptile.stage IS '拍卖阶段（一拍、二拍、变卖、撤回）';
 COMMENT ON COLUMN lawsuit_reptile.status IS '状态（1待开拍、2竞拍中、已结束:3成交，4流拍、0无效或撤回）';
-COMMENT ON COLUMN lawsuit_reptile.push IS '是否推送';
+COMMENT ON COLUMN lawsuit_reptile.push IS '是否已推送文章';
 COMMENT ON COLUMN lawsuit_reptile.create_time IS '创建时间';
 
 -- 爬虫相册记录表
