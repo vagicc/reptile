@@ -11,7 +11,18 @@ extern crate diesel;
 
 #[tokio::main]
 async fn main() {
-    println!("跟我买车-爬虫!");
+    // let mut args = std::env::args();
+
+    // 拍卖ID
+    // let paimai_id = args.nth(1).expect("必须传拍卖ID");
+
+    let paimai_id = std::env::args().nth(1).expect("必须传拍卖ID");
+
+    //所属平台（1&.淘宝、2.京东）
+    // let belong = args.nth(2).unwrap_or_else(|| "1".to_string());
+    let belong = std::env::args().nth(2).unwrap_or_else(|| "1".to_string());
+
+    println!("跟我买车-爬虫! id={}, 平台：{}", paimai_id, belong);
 
     //https://sf-item.taobao.com/sf_item/675747836997.htm
     //https://sf-item.taobao.com/auction.htm?spm=a2129.7388457.p1000.50.2fc47e367xEfWY&id=675425091824
@@ -19,11 +30,14 @@ async fn main() {
 
     // 京东   https://paimai.jd.com/289011596
     // let url = "https://paimai.jd.com/289011596";
-    let belong = 1; //所属平台（1.淘宝、2.京东）
+    // let belong = 1; //所属平台（1.淘宝、2.京东）
 
-    if belong == 1 {
+    if belong.eq("1") {
+        let url = "https://sf-item.taobao.com/sf_item/{}.htm".replace("{}", &paimai_id);
+        let url = url.as_str();
+
         // 抓取
-        let url = "https://sf-item.taobao.com/sf_item/678431542538.htm";
+        // let url = "https://sf-item.taobao.com/sf_item/679604587720.htm";
         let result = crate::http::http_request(url).await;
         let response = result.unwrap();
         let html = response.html.as_str();
@@ -37,11 +51,10 @@ async fn main() {
         let data = data.unwrap();
         insert_table(data, url); //插入到表
     } else {
-        let paimai_id = "289632697";
         let url = format!("https://paimai.jd.com/{}", paimai_id);
         let url = url.to_owned();
 
-        let data = crate::parse::jd_select(paimai_id).await;
+        let data = crate::parse::jd_select(&paimai_id).await;
         if data.is_none() {
             log::error!("京东法拍接口取数据出错");
         }
