@@ -180,19 +180,39 @@ pub async fn taobao_select(html: &str) -> Option<Reptile> {
             <span id="J_Delay" class="pm-delay"><em class="delayCnt">0</em>次延时</span>
         </li>
     */
-    let time_node = document.find(Attr("id", "sf-countdown")).next().unwrap();
-    let start_time = time_node
-        .attr("data-start")
-        .expect("找不到开始拍卖时间戳")
-        .trim();
-    let start_time = start_time.parse::<i64>().unwrap();
-    // println!("开始拍卖时间:{:#?}", start_time);
-    let end_time = time_node
-        .attr("data-end")
-        .expect("拍卖结束时间戳找不到")
-        .trim();
-    let end_time = end_time.parse::<i64>().unwrap();
-    // println!("拍卖结束时间戳:{:#?}", end_time);
+
+    let mut start_time: i64 = 0;
+    let mut end_time: i64 = 0;
+    //拍卖结束后找不到此ID:sf-countdown
+    if let Some(time_node) = document.find(Attr("id", "sf-countdown")).next() {
+        let start_time_str = time_node
+            .attr("data-start")
+            .expect("找不到开始拍卖时间戳")
+            .trim();
+        start_time = start_time_str.parse::<i64>().unwrap();
+
+        // println!("开始拍卖时间:{:#?}", start_time);
+        let end_time_str = time_node
+            .attr("data-end")
+            .expect("拍卖结束时间戳找不到")
+            .trim();
+        end_time = end_time_str.parse::<i64>().unwrap();
+        // println!("拍卖结束时间戳:{:#?}", end_time);
+    }
+
+    // let time_node = document.find(Attr("id", "sf-countdown")).next().unwrap();
+    // let start_time = time_node
+    //     .attr("data-start")
+    //     .expect("找不到开始拍卖时间戳")
+    //     .trim();
+    // let start_time = start_time.parse::<i64>().unwrap();
+    // // println!("开始拍卖时间:{:#?}", start_time);
+    // let end_time = time_node
+    //     .attr("data-end")
+    //     .expect("拍卖结束时间戳找不到")
+    //     .trim();
+    // let end_time = end_time.parse::<i64>().unwrap();
+    // // println!("拍卖结束时间戳:{:#?}", end_time);
 
     // 价格：id="sf-price"
     let price_node = document
@@ -203,14 +223,28 @@ pub async fn taobao_select(html: &str) -> Option<Reptile> {
     let current_price = price_node.text().trim().replace(",", "");
     // println!("当前价：{}", current_price);
 
-    // 保证金 margin
     let margin_node = document
         .find(Attr("id", "submitDeposit").descendant(Name("span")))
-        .next()
-        .unwrap();
-    let margin_string = margin_node.text();
-    let margin_split: Vec<&str> = margin_string.trim().split('¥').collect();
-    let margin = margin_split.last().expect("切割(保证金)出错");
+        .next();
+
+    let mut margin = String::new();
+    if let Some(margin_node) = margin_node {
+        let margin_string = margin_node.text();
+        let margin_split: Vec<&str> = margin_string.trim().split('¥').collect();
+        margin = margin_split.last().expect("切割(保证金)出错").to_string();
+    } else {
+        println!("已拍卖结束，没未登录交保证HTML");
+    }
+
+    // 保证金 margin
+    // let margin_node = document
+    //     .find(Attr("id", "submitDeposit").descendant(Name("span")))
+    //     .next()
+    //     .expect("找不到保证金"); //J_HoverShow
+    // let margin_string = margin_node.text();
+    // let margin_split: Vec<&str> = margin_string.trim().split('¥').collect();
+
+    // let margin = margin_split.last().expect("切割(保证金)出错");
     // println!("保证金:{}", margin);
 
     // 标的物位置
@@ -262,6 +296,11 @@ pub async fn taobao_select(html: &str) -> Option<Reptile> {
             price_base = price_number;
             continue;
         }
+        // 这里再找“保证金”
+        if margin.is_empty() && price_title.eq("保证金") {
+            margin = price_number;
+            continue;
+        }
     }
 
     let mut photos_vec: Vec<Photo> = Vec::new();
@@ -288,7 +327,6 @@ pub async fn taobao_select(html: &str) -> Option<Reptile> {
         // 相册小图(80x80)：  //img.alicdn.com/bao/uploaded/i1/O1CN01jKw1eA2CUyc16XOrd_!!0-paimai.jpg_80x80.jpg
         // 相册大图(460x460)：//img.alicdn.com/bao/uploaded/i1/O1CN01jKw1eA2CUyc16XOrd_!!0-paimai.jpg_460x460.jpg
         // 原图，在详情  https://img.alicdn.com/bao/uploaded/i1/O1CN01jKw1eA2CUyc16XOrd_!!0-paimai.jpg_960x960.jpg
-        
         photos_vec.push(Photo {
             external_small: img_src.to_string(),
             external_middle: img_460,
