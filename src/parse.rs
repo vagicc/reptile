@@ -335,7 +335,8 @@ pub async fn taobao_select(html: &str) -> Option<Reptile> {
     }
 
     let price_base = price_base.parse::<f64>().expect("字符串转f64出错");
-    let assess_price = assess_price.parse::<f64>().expect("字符串转f64出错");
+    // let assess_price = assess_price.parse::<f64>().expect("字符串转f64出错");
+    let assess_price = assess_price.parse::<f64>().unwrap_or_default(); //无评估价时
     let margin = margin.trim().replace(",", "");
     let margin = margin.parse::<f64>().expect("字符串转f64出错");
     Some(Reptile {
