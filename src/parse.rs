@@ -260,11 +260,18 @@ pub async fn taobao_select(html: &str) -> Option<Reptile> {
     let address = format!("{} {}", address, address_detail);
 
     // 处置单位disposal_unit
+    // let unit_node = document
+    //     .find(Class("unit-name"))
+    //     .next()
+    //     .expect("处置单位disposal_unit找不到unit-name")
+    //     .find(Name("a"))
+    //     .next()
+    //     .unwrap();
     let unit_node = document
-        .find(Class("unit-name"))
+        .find(Class("unit-org-content"))
         .next()
-        .unwrap()
-        .find(Name("a"))
+        .expect("处置单位找不到")
+        .find(Name("p"))
         .next()
         .unwrap();
     let disposal_unit = unit_node.text().trim().to_string();
