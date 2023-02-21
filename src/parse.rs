@@ -150,6 +150,7 @@ pub async fn taobao_select(html: &str) -> Option<Reptile> {
     let pm_main = document.find(Class("pm-main")).next();
     if pm_main.is_none() {
         log::error!("查无主体");
+        println!("查无主体");
         return None;
     }
     let pm_main_node = pm_main.unwrap();

@@ -41,11 +41,12 @@ async fn main() {
         let result = crate::http::http_request(url).await;
         let response = result.unwrap();
         let html = response.html.as_str();
-        // println!("抓取到的html=========={}", html);
+        println!("抓取到的html=========={}", html);
         // let html = include_str!("html/taobao.html");
         let data = crate::parse::taobao_select(html).await;
         if data.is_none() {
             log::error!("解析HTML得不到数据");
+            println!("解析HTML得不到数据");
         }
         println!("抓到的数据：{:#?}", data);
         let data = data.unwrap();
